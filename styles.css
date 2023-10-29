@@ -1,0 +1,91 @@
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #282623;
+  --black: #201e1c;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #fff;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-width: 320px;
+  background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+.header__logo {
+  align-self: center;
+  margin-top: 39px;
+  margin-bottom: 33px;
+  width: 151px;
+  height: 24px;
+}
+
+.header__title {
+  align-self: center;
+  width: 90%;
+  max-width: 693px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--just-white)
+}
+.header__paragraph {
+  align-self: center;
+  margin-top: 24px;
+  margin-bottom: 61px;
+  width: 90%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--soft-orange)
+}
+
+.header__link {
+  position: absolute;
+  top: 270px;
+  align-self: center;
+  padding: 12px 16px;
+  width: 229px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  border-radius: 4px;
+  color: var(--warm-black);
+  background: var(--off-white);
+  box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+}
+
+.header__span {
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-left: 8px;
+  background-image: url('./assets/icons/header_arrow_down.svg');
+  background-position: center;
+}
